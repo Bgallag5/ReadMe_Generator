@@ -47,7 +47,6 @@ function generateMarkdown(questions) {
   return `
   ${renderLicenseBadge(questions)}
 
- # Title  
  # ${questions.title}
 
   -[Description](#description)
