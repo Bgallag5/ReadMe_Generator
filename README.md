@@ -10,7 +10,8 @@
   -[License](#license)
 
   ## Description  
-  A program that generates professional quality read me files for github projects
+  A program that generates professional quality read me files for github projects. 
+  This application uses Javascript and Node.js
 
   ## Usage 
   For people who want to quickly create a quality README file
