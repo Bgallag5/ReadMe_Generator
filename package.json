@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Bgallag5/ReadMe_Generator/issues"
   },
-  "homepage": "https://github.com/Bgallag5/ReadMe_Generator#readme"
+  "homepage": "https://github.com/Bgallag5/ReadMe_Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
 }
