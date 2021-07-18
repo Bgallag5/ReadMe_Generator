@@ -1,7 +1,4 @@
 //import packages; array of questions; init() => generateMarkdown 
-
-
-
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
@@ -16,11 +13,123 @@ const questions = [{
         if (title){
             return true;
         } else if(!title){
-            console.log('Please enter your name');
+            console.log('Please enter required information');
             return false;
         }
     }
-}];
+},
+{   
+    type: 'input',
+    name: 'description',
+    message: 'Please give a brief description of your project:',
+    validate: description => {
+        if (description){
+            return true;
+        } else if(!description){
+            console.log('Please enter required information');
+            return false;
+        }
+    }
+},
+{   
+    type: 'confirm',
+    name: 'table',
+    message: 'Will you need a table of contents?',
+    default: false,
+},
+{   
+    type: 'input',
+    name: 'installation',
+    message: 'Please give instructions for how to install and run your project:',
+    validate: installation => {
+        if (installation){
+            return true;
+        } else if(!installation){
+            console.log('Please enter required information');
+            return false;
+        }
+    }
+},
+{   
+    type: 'input',
+    name: 'usage',
+    message: 'Please give an example use-case for this project:',
+    validate: usage => {
+        if (usage){
+            return true;
+        } else if(!usage){
+            console.log('Please enter required information');
+            return false;
+        }
+    }
+},
+{   
+    type: 'input',
+    name: 'contributions',
+    message: 'Who else worked on this project? Type their github username.', //add another?
+    validate: contributions => {
+        if (contributions){
+            return true;
+        } else if(!contributions){
+            console.log('Please enter required information');
+            return false;
+        }
+    }
+},
+{   
+    type: 'input',
+    name: 'tests',
+    message: 'How was this project tested?',
+    validate: tests => {
+        if (tests){
+            return true;
+        } else if(!tests){
+            console.log('Please enter required information');
+            return false;
+        }
+    }
+},
+{   
+    type: 'input',
+    name: 'questionsgit',
+    message: 'What is your github name?',
+    validate: questionsgit => {
+        if (questionsgit){
+            return true;
+        } else if(!questionsgit){
+            console.log('Please enter required information');
+            return false;
+        }
+    }
+},
+{   
+    type: 'input',
+    name: 'questionsemail',
+    message: 'What is your email?',
+    validate: questionsemail => {
+        if (questionsemail){
+            return true;
+        } else if(!questionsemail){
+            console.log('Please enter required information');
+            return false;
+        }
+    }
+},
+{   
+    type: 'rawlist',
+    name: 'license',
+    message: 'Which license does your project need?',
+    choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', "I don't want to add a license"],
+    validate: license => {
+        if (license){
+            return true;
+        } else if(!license){
+            console.log('Please enter required information');
+            return false;
+        }
+    }
+},
+];
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
