@@ -1,7 +1,6 @@
  [![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
 
- # Title  
  # Professional README Generator
 
   -[Description](#description)
@@ -13,17 +12,11 @@
   ## Description  
   A program that generates professional quality read me files for github projects
 
-  ## Installation
-  na
-
   ## Usage 
   For people who want to quickly create a quality README file
 
   ## Contributions
   [Bgallag5 GitHub](https://github.com/Bgallag5)
-
-  ## Tests
-  na
 
   ## Questions?
   Check out my [Github](https://github.com/Bgallag5)
