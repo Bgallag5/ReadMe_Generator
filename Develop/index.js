@@ -8,7 +8,7 @@ const writeToFile = require('./utils/generateMarkdown');
 const questions = [{
     type: 'input',
     name: 'title',
-    message: 'What is the title of your project?',
+    message: 'What is the title of your project? (Required)',
     validate: title => {
         if (title){
             return true;
@@ -21,7 +21,7 @@ const questions = [{
 {   
     type: 'input',
     name: 'description',
-    message: 'Please give a brief description of your project:',
+    message: 'Please give a brief description of your project. (Required)',
     validate: description => {
         if (description){
             return true;
@@ -32,15 +32,9 @@ const questions = [{
     }
 },
 {   
-    type: 'confirm',
-    name: 'table',
-    message: 'Will you need a table of contents?',
-    default: false,
-},
-{   
     type: 'input',
     name: 'installation',
-    message: 'Please give instructions for how to install and run your project:',
+    message: 'Please give instructions for how to install and run your project. (Required)',
     validate: installation => {
         if (installation){
             return true;
@@ -53,7 +47,7 @@ const questions = [{
 {   
     type: 'input',
     name: 'usage',
-    message: 'Please give an example use-case for this project:',
+    message: 'Please give an example use-case for this project. (Required)',
     validate: usage => {
         if (usage){
             return true;
@@ -66,20 +60,12 @@ const questions = [{
 {   
     type: 'input',
     name: 'contributions',
-    message: 'Who else worked on this project? Type their github username.', //add another?
-    validate: contributions => {
-        if (contributions){
-            return true;
-        } else if(!contributions){
-            console.log('Please enter required information');
-            return false;
-        }
-    }
+    message: 'Who else worked on this project? Type their github username: (Optional)', 
 },
 {   
     type: 'input',
     name: 'tests',
-    message: 'How was this project tested?',
+    message: 'How was this project tested? (Required)',
     validate: tests => {
         if (tests){
             return true;
@@ -92,7 +78,7 @@ const questions = [{
 {   
     type: 'input',
     name: 'questionsgit',
-    message: 'What is your github name?',
+    message: 'What is your github name? (Required)',
     validate: questionsgit => {
         if (questionsgit){
             return true;
@@ -105,7 +91,7 @@ const questions = [{
 {   
     type: 'input',
     name: 'questionsemail',
-    message: 'What is your email?',
+    message: 'What is your email? (Required)',
     validate: questionsemail => {
         if (questionsemail){
             return true;
@@ -118,7 +104,7 @@ const questions = [{
 {   
     type: 'rawlist',
     name: 'license',
-    message: 'Which license does your project need?',
+    message: 'Which license does your project need? (Required)',
     choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', "I don't want to add a license"],
     validate: license => {
         if (license){
@@ -131,10 +117,7 @@ const questions = [{
 },
 ];
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
+//  Create a function to initialize app and write a README file
 function init() {
     inquirer.prompt(questions)
     .then(questions =>{

@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 
 //license and link info found at https://choosealicense.com/ 
@@ -17,13 +17,13 @@ if(license == 'Apache License 2.0'){
   return `
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 `
-} else if (license == ''){
-  return 'No License Used';
+} else if (license == "I don't want to add a license"){
+  return " ";
 }
 
 }
-function renderLicenseLink(license) {}
-// TODO: Create a function that returns the license section of README
+
+// Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(questions) {
 let license = questions.license;
@@ -36,13 +36,13 @@ if(license == 'Apache License 2.0'){
 } else if(license == 'MIT'){
   return `
   A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.`
-} else if (license == ''){
-  return '';
+} else if (license == "I don't want to add a license"){
+  return " ";
 }
 
 }
 
-// TODO: Create a function to generate markdown for README; Title, Description, Table of contents, Installation, Usage, License, Contributing, Tests, Questions. 
+//  Create a function to generate markdown for README; Title, Description, Table of contents, Installation, Usage, License, Contributing, Tests, Questions. 
 function generateMarkdown(questions) {
   return `
   ${renderLicenseBadge(questions)}
@@ -76,7 +76,6 @@ function generateMarkdown(questions) {
   ...or email me @ ${questions.questionsemail}
 
   ## License  
-  ${questions.license}
   ${renderLicenseSection(questions)}
  
 
