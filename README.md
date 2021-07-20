@@ -11,7 +11,9 @@
 
   ## Description  
   A program that generates professional quality read me files for github projects.    
-  This application uses Javascript and Node.js
+  This application uses Javascript and Node.js. 
+  Video: https://user-images.githubusercontent.com/82895658/126351733-1011fb69-2bec-42a8-a542-e742076451b3.mp4
+
 
   ## Usage 
   For people who want to quickly create a quality README file
